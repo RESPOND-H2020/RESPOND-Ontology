@@ -1,6 +1,7 @@
 # RESPOND
 The RESPOND project aims to implement a cooperative energy demand management solution so that residential energy users can better match energy supply with demand.
-![RESPOND logo](https://i.imgur.com/Yj7auv6.jpg)
+
+![RESPOND logo](https://i.imgur.com/Yj7auv6.jpg=100x20)
 
  
 # RESPOND funding
