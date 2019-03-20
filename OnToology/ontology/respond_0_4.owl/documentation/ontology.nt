@@ -1,0 +1,313 @@
+<https://w3id.org/def/respond#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/respond#> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/saref> .
+<https://w3id.org/def/respond#> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot/0.3.0> .
+<https://w3id.org/def/respond#> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/seas/FeatureOfInterestOntology> .
+<https://w3id.org/def/respond#> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> .
+<https://w3id.org/def/respond#> <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>\nFrancisco Javier Diez <mailto:francisco.diez@tekniker.es>" .
+<https://w3id.org/def/respond#> <http://purl.org/dc/terms/description> "The RESPOND project aims to deploy an interoperable energy automation, monitoring and control solution to deliver DR programs at a dwelling, building and district level."@en .
+<https://w3id.org/def/respond#> <http://purl.org/dc/terms/title> "RESPOND" .
+<https://w3id.org/def/respond#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "respond" .
+<https://w3id.org/def/respond#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#> <http://www.w3.org/2002/07/owl#versionInfo> "0.4"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/respond#connectsToInternetThrough
+<https://w3id.org/def/respond#connectsToInternetThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/respond#connectsToInternetThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Device with the Gateway with which it is connected to the Internet."@en .
+<https://w3id.org/def/respond#connectsToInternetThrough> <http://www.w3.org/2000/01/rdf-schema#label> "connectsToInternetThrough"@en .
+# 
+# https://w3id.org/seas/isPropertyOf
+<https://w3id.org/seas/isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An unambiguous reference to the resource within a given context."@en .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier"@en .
+# 
+# https://w3id.org/def/respond#hasMeasurementID
+<https://w3id.org/def/respond#hasMeasurementID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/respond#hasMeasurementID> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines the identifier of the Measurements of a Property." .
+<https://w3id.org/def/respond#hasMeasurementID> <http://www.w3.org/2000/01/rdf-schema#label> "hasMeasurementID" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/vocommons/voaf#Vocabulary
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/bot#Element
+<https://w3id.org/bot#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/bot#Zone
+<https://w3id.org/bot#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/seas/FeatureOfInterest> .
+# 
+# https://w3id.org/def/respond#ACFrequency
+<https://w3id.org/def/respond#ACFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#ACFrequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/respond#ACFrequency> <http://www.w3.org/2000/01/rdf-schema#comment> "AC frequency is the number of cycles per second in an alternating current (AC) sine wave."@en .
+<https://w3id.org/def/respond#ACFrequency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#ACFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "AC Frequency"@en .
+<https://w3id.org/def/respond#ACFrequency> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#AirConditioner
+<https://w3id.org/def/respond#AirConditioner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#AirConditioner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Appliance> .
+<https://w3id.org/def/respond#AirConditioner> <http://www.w3.org/2000/01/rdf-schema#comment> "A machine that keeps the air in a building cool."@en .
+<https://w3id.org/def/respond#AirConditioner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#AirConditioner> <http://www.w3.org/2000/01/rdf-schema#label> "Air Conditioner"@en .
+<https://w3id.org/def/respond#AirConditioner> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#AlarmProperty
+<https://w3id.org/def/respond#AlarmProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#AlarmProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/respond#AlarmProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A warning of danger or potential undesired situation."@en .
+<https://w3id.org/def/respond#AlarmProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#AlarmProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Alarm"@en .
+<https://w3id.org/def/respond#AlarmProperty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#Boiler
+<https://w3id.org/def/respond#Boiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#Boiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Appliance> .
+<https://w3id.org/def/respond#Boiler> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that heats water, especially to provide heating and hot water in a house."@en .
+<https://w3id.org/def/respond#Boiler> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#Boiler> <http://www.w3.org/2000/01/rdf-schema#label> "Boiler"@en .
+<https://w3id.org/def/respond#Boiler> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#Current
+<https://w3id.org/def/respond#Current> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#Current> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/respond#Current> <http://www.w3.org/2000/01/rdf-schema#comment> "The movement of electricity in a particular direction."@en .
+<https://w3id.org/def/respond#Current> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#Current> <http://www.w3.org/2000/01/rdf-schema#label> "Current"@en .
+<https://w3id.org/def/respond#Current> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#Dishwasher
+<https://w3id.org/def/respond#Dishwasher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#Dishwasher> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Appliance> .
+<https://w3id.org/def/respond#Dishwasher> <http://www.w3.org/2000/01/rdf-schema#comment> "A machine for washing dishes."@en .
+<https://w3id.org/def/respond#Dishwasher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#Dishwasher> <http://www.w3.org/2000/01/rdf-schema#label> "Dishwasher"@en .
+<https://w3id.org/def/respond#Dishwasher> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#ElectricConsumption
+<https://w3id.org/def/respond#ElectricConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#ElectricConsumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/respond#ElectricConsumption> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of electricity consumed."@en .
+<https://w3id.org/def/respond#ElectricConsumption> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#ElectricConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "Electric Consumption"@en .
+<https://w3id.org/def/respond#ElectricConsumption> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#Gateway
+<https://w3id.org/def/respond#Gateway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#Gateway> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Device> .
+<https://w3id.org/def/respond#Gateway> <http://www.w3.org/2000/01/rdf-schema#comment> "A gateway is a piece of networking hardware used in telecommunications for telecommunications networks that allows data to flow from one discrete network to another."@en .
+<https://w3id.org/def/respond#Gateway> <http://www.w3.org/2000/01/rdf-schema#label> "Gateway" .
+# 
+# https://w3id.org/def/respond#HeatingDevice
+<https://w3id.org/def/respond#HeatingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#HeatingDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Appliance> .
+<https://w3id.org/def/respond#HeatingDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that produces heat."@en .
+<https://w3id.org/def/respond#HeatingDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#HeatingDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Heating Device"@en .
+<https://w3id.org/def/respond#HeatingDevice> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#IT
+<https://w3id.org/def/respond#IT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#IT> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Appliance> .
+<https://w3id.org/def/respond#IT> <http://www.w3.org/2000/01/rdf-schema#comment> "An appliance related to IT (Information Technology) such as computer, printer, etc."@en .
+<https://w3id.org/def/respond#IT> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#IT> <http://www.w3.org/2000/01/rdf-schema#label> "IT"@en .
+<https://w3id.org/def/respond#IT> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#Lamp
+<https://w3id.org/def/respond#Lamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#Lamp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Appliance> .
+<https://w3id.org/def/respond#Lamp> <http://www.w3.org/2000/01/rdf-schema#comment> "A device for giving light, especially one that has a covering or is contained within something."@en .
+<https://w3id.org/def/respond#Lamp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#Lamp> <http://www.w3.org/2000/01/rdf-schema#label> "Lamp"@en .
+<https://w3id.org/def/respond#Lamp> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#NetworkLinkStrength
+<https://w3id.org/def/respond#NetworkLinkStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#NetworkLinkStrength> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/respond#NetworkLinkStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "The stength of a network link"@en .
+<https://w3id.org/def/respond#NetworkLinkStrength> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#NetworkLinkStrength> <http://www.w3.org/2000/01/rdf-schema#label> "Network Link Strength"@en .
+<https://w3id.org/def/respond#NetworkLinkStrength> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#Occupancy
+<https://w3id.org/def/respond#Occupancy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#Occupancy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/respond#Occupancy> <http://www.w3.org/2000/01/rdf-schema#comment> "Usage of a space."@en .
+<https://w3id.org/def/respond#Occupancy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#Occupancy> <http://www.w3.org/2000/01/rdf-schema#label> "Occupancy"@en .
+<https://w3id.org/def/respond#Occupancy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#OnOffProperty
+<https://w3id.org/def/respond#OnOffProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#OnOffProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/respond#OnOffProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A property that determines if something is activated (on) or not (off)."@en .
+<https://w3id.org/def/respond#OnOffProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#OnOffProperty> <http://www.w3.org/2000/01/rdf-schema#label> "OnOff"@en .
+<https://w3id.org/def/respond#OnOffProperty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#PowerConsumption
+<https://w3id.org/def/respond#PowerConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/respond#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of power consumed."@en .
+<https://w3id.org/def/respond#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "Power Consumption"@en .
+<https://w3id.org/def/respond#PowerConsumption> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#Printer
+<https://w3id.org/def/respond#Printer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#Printer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Appliance> .
+<https://w3id.org/def/respond#Printer> <http://www.w3.org/2000/01/rdf-schema#comment> "A machine that is connected to a computer and prints onto paper using ink."@en .
+<https://w3id.org/def/respond#Printer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#Printer> <http://www.w3.org/2000/01/rdf-schema#label> "Printer"@en .
+<https://w3id.org/def/respond#Printer> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#RSSI
+<https://w3id.org/def/respond#RSSI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#RSSI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/respond#RSSI> <http://www.w3.org/2000/01/rdf-schema#comment> "Received Signal Strength Indicator"@en .
+<https://w3id.org/def/respond#RSSI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#RSSI> <http://www.w3.org/2000/01/rdf-schema#label> "RSSI"@en .
+<https://w3id.org/def/respond#RSSI> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#StoveOven
+<https://w3id.org/def/respond#StoveOven> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#StoveOven> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Appliance> .
+<https://w3id.org/def/respond#StoveOven> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of equipment that burns fuel or uses electricity in order to heat a place."@en .
+<https://w3id.org/def/respond#StoveOven> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#StoveOven> <http://www.w3.org/2000/01/rdf-schema#label> "Stove Oven"@en .
+<https://w3id.org/def/respond#StoveOven> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#TV
+<https://w3id.org/def/respond#TV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#TV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Appliance> .
+<https://w3id.org/def/respond#TV> <http://www.w3.org/2000/01/rdf-schema#comment> "A device shaped like a box with a screen that receives electrical signals and changes them into moving images and sound, or the method or business of sending images and sound by electrical signals."@en .
+<https://w3id.org/def/respond#TV> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#TV> <http://www.w3.org/2000/01/rdf-schema#label> "TV"@en .
+<https://w3id.org/def/respond#TV> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#TemperatureSetpoint
+<https://w3id.org/def/respond#TemperatureSetpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#TemperatureSetpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/respond#TemperatureSetpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The target value at which a controller attempts to maintain the temperature."@en .
+<https://w3id.org/def/respond#TemperatureSetpoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#TemperatureSetpoint> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature Setpoint"@en .
+<https://w3id.org/def/respond#TemperatureSetpoint> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#TumbleDryer
+<https://w3id.org/def/respond#TumbleDryer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#TumbleDryer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Appliance> .
+<https://w3id.org/def/respond#TumbleDryer> <http://www.w3.org/2000/01/rdf-schema#comment> "A machine that dries washed clothes by spinning them in hot air inside a rotating drum."@en .
+<https://w3id.org/def/respond#TumbleDryer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#TumbleDryer> <http://www.w3.org/2000/01/rdf-schema#label> "Tumble Dryer"@en .
+<https://w3id.org/def/respond#TumbleDryer> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#Voltage
+<https://w3id.org/def/respond#Voltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#Voltage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/def/respond#Voltage> <http://www.w3.org/2000/01/rdf-schema#comment> "The force of an electric current, measured in volts."@en .
+<https://w3id.org/def/respond#Voltage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#Voltage> <http://www.w3.org/2000/01/rdf-schema#label> "Voltage"@en .
+<https://w3id.org/def/respond#Voltage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/def/respond#WashingMachine
+<https://w3id.org/def/respond#WashingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/respond#WashingMachine> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/saref#WashingMachine> .
+<https://w3id.org/def/respond#WashingMachine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Appliance> .
+<https://w3id.org/def/respond#WashingMachine> <http://www.w3.org/2000/01/rdf-schema#comment> "A home appliance for washing clothes and linens automatically."@en .
+<https://w3id.org/def/respond#WashingMachine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/respond> .
+<https://w3id.org/def/respond#WashingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Washing Machine"@en .
+<https://w3id.org/def/respond#WashingMachine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/saref#Appliance
+<https://w3id.org/saref#Appliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/seas/FeatureOfInterest> .
+# 
+# https://w3id.org/saref#Device
+<https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .
+# 
+# https://w3id.org/saref#Property
+<https://w3id.org/saref#Property> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/seas/Property> .
+# 
+# https://w3id.org/saref#WashingMachine
+# 
+# https://w3id.org/seas/FeatureOfInterest
+<https://w3id.org/seas/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/seas/Property
+<https://w3id.org/seas/Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/respond/
+<https://w3id.org/def/respond/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/respond/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
