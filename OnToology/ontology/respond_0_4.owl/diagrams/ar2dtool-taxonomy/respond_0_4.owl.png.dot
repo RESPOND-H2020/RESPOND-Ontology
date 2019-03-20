@@ -1,0 +1,32 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "respond:NetworkLinkStrength" "respond:WashingMachine" "respond:TemperatureSetpoint" "respond:StoveOven" "respond:Current" "respond:TV" "https://w3id.org/seas/FeatureOfInterest" "respond:ACFrequency" "respond:Voltage" "respond:IT" "respond:TumbleDryer" "respond:Gateway" "respond:RSSI" "respond:Printer" "respond:Boiler" "respond:Lamp" "respond:Dishwasher" "respond:PowerConsumption" "respond:AlarmProperty" "respond:AirConditioner" "respond:Occupancy" "respond:HeatingDevice" "respond:OnOffProperty" "respond:ElectricConsumption" ; /*classes style*/
+	"respond:Gateway" -> "https://w3id.org/saref#Device" [ label = "rdfs:subClassOf" ];
+	"respond:Lamp" -> "https://w3id.org/saref#Appliance" [ label = "rdfs:subClassOf" ];
+	"respond:Voltage" -> "https://w3id.org/saref#Property" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/bot#Zone" -> "https://w3id.org/seas/FeatureOfInterest" [ label = "rdfs:subClassOf" ];
+	"respond:AirConditioner" -> "https://w3id.org/saref#Appliance" [ label = "rdfs:subClassOf" ];
+	"respond:IT" -> "https://w3id.org/saref#Appliance" [ label = "rdfs:subClassOf" ];
+	"respond:Boiler" -> "https://w3id.org/saref#Appliance" [ label = "rdfs:subClassOf" ];
+	"respond:Dishwasher" -> "https://w3id.org/saref#Appliance" [ label = "rdfs:subClassOf" ];
+	"respond:TemperatureSetpoint" -> "https://w3id.org/saref#Property" [ label = "rdfs:subClassOf" ];
+	"respond:HeatingDevice" -> "https://w3id.org/saref#Appliance" [ label = "rdfs:subClassOf" ];
+	"respond:PowerConsumption" -> "https://w3id.org/saref#Property" [ label = "rdfs:subClassOf" ];
+	"respond:StoveOven" -> "https://w3id.org/saref#Appliance" [ label = "rdfs:subClassOf" ];
+	"respond:Current" -> "https://w3id.org/saref#Property" [ label = "rdfs:subClassOf" ];
+	"respond:AlarmProperty" -> "https://w3id.org/saref#Property" [ label = "rdfs:subClassOf" ];
+	"respond:OnOffProperty" -> "https://w3id.org/saref#Property" [ label = "rdfs:subClassOf" ];
+	"respond:Occupancy" -> "https://w3id.org/saref#Property" [ label = "rdfs:subClassOf" ];
+	"respond:TumbleDryer" -> "https://w3id.org/saref#Appliance" [ label = "rdfs:subClassOf" ];
+	"respond:NetworkLinkStrength" -> "https://w3id.org/saref#Property" [ label = "rdfs:subClassOf" ];
+	"respond:WashingMachine" -> "https://w3id.org/saref#Appliance" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/saref#Appliance" -> "https://w3id.org/seas/FeatureOfInterest" [ label = "rdfs:subClassOf" ];
+	"respond:TV" -> "https://w3id.org/saref#Appliance" [ label = "rdfs:subClassOf" ];
+	"respond:Printer" -> "https://w3id.org/saref#Appliance" [ label = "rdfs:subClassOf" ];
+	"respond:RSSI" -> "https://w3id.org/saref#Property" [ label = "rdfs:subClassOf" ];
+	"respond:ACFrequency" -> "https://w3id.org/saref#Property" [ label = "rdfs:subClassOf" ];
+	"respond:ElectricConsumption" -> "https://w3id.org/saref#Property" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/saref#Device" -> "https://w3id.org/bot#Element" [ label = "rdfs:subClassOf" ];
+
+}

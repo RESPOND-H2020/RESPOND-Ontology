@@ -1,0 +1,565 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/def/respond#"
+     xml:base="https://w3id.org/def/respond"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:ns1="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/def/respond#">
+        <owl:imports rdf:resource="https://w3id.org/saref"/>
+        <owl:imports rdf:resource="https://w3id.org/bot/0.3.0"/>
+        <owl:imports rdf:resource="https://w3id.org/seas/FeatureOfInterestOntology"/>
+        <ns1:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <terms:creator>Iker Esnaola-Gonzalez &lt;mailto:iker.esnaola@tekniker.es&gt;
+Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
+        <terms:description xml:lang="en">The RESPOND project aims to deploy an interoperable energy automation, monitoring and control solution to deliver DR programs at a dwelling, building and district level.</terms:description>
+        <terms:title>RESPOND</terms:title>
+        <vann:preferredNamespacePrefix>respond</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/respond"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/respond#connectsToInternetThrough -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/respond#connectsToInternetThrough">
+        <rdfs:comment xml:lang="en">Relates a Device with the Gateway with which it is connected to the Internet.</rdfs:comment>
+        <rdfs:label xml:lang="en">connectsToInternetThrough</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/seas/isPropertyOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/seas/isPropertyOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/respond#hasMeasurementID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/respond#hasMeasurementID">
+        <rdfs:comment>Determines the identifier of the Measurements of a Property.</rdfs:comment>
+        <rdfs:label>hasMeasurementID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#Vocabulary -->
+
+
+    <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    
+
+
+    <!-- https://w3id.org/bot#Element -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Element"/>
+    
+
+
+    <!-- https://w3id.org/bot#Zone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Zone">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/seas/FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#ACFrequency -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#ACFrequency">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment xml:lang="en">AC frequency is the number of cycles per second in an alternating current (AC) sine wave.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">AC Frequency</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#AirConditioner -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#AirConditioner">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Appliance"/>
+        <rdfs:comment xml:lang="en">A machine that keeps the air in a building cool.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Air Conditioner</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#AlarmProperty -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#AlarmProperty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment xml:lang="en">A warning of danger or potential undesired situation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Alarm</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#Boiler -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#Boiler">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Appliance"/>
+        <rdfs:comment xml:lang="en">A device that heats water, especially to provide heating and hot water in a house.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Boiler</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#Current -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#Current">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment xml:lang="en">The movement of electricity in a particular direction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Current</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#Dishwasher -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#Dishwasher">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Appliance"/>
+        <rdfs:comment xml:lang="en">A machine for washing dishes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Dishwasher</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#ElectricConsumption -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#ElectricConsumption">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment xml:lang="en">The amount of electricity consumed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Electric Consumption</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#Gateway -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#Gateway">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+        <rdfs:comment xml:lang="en">A gateway is a piece of networking hardware used in telecommunications for telecommunications networks that allows data to flow from one discrete network to another.</rdfs:comment>
+        <rdfs:label>Gateway</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#HeatingDevice -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#HeatingDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Appliance"/>
+        <rdfs:comment xml:lang="en">A device that produces heat.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Heating Device</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#IT -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#IT">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Appliance"/>
+        <rdfs:comment xml:lang="en">An appliance related to IT (Information Technology) such as computer, printer, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">IT</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#Lamp -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#Lamp">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Appliance"/>
+        <rdfs:comment xml:lang="en">A device for giving light, especially one that has a covering or is contained within something.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Lamp</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#NetworkLinkStrength -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#NetworkLinkStrength">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment xml:lang="en">The stength of a network link</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Network Link Strength</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#Occupancy -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#Occupancy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment xml:lang="en">Usage of a space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Occupancy</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#OnOffProperty -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#OnOffProperty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment xml:lang="en">A property that determines if something is activated (on) or not (off).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">OnOff</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#PowerConsumption -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#PowerConsumption">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment xml:lang="en">The amount of power consumed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Power Consumption</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#Printer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#Printer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Appliance"/>
+        <rdfs:comment xml:lang="en">A machine that is connected to a computer and prints onto paper using ink.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Printer</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#RSSI -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#RSSI">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment xml:lang="en">Received Signal Strength Indicator</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">RSSI</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#StoveOven -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#StoveOven">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Appliance"/>
+        <rdfs:comment xml:lang="en">A piece of equipment that burns fuel or uses electricity in order to heat a place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Stove Oven</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#TV -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#TV">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Appliance"/>
+        <rdfs:comment xml:lang="en">A device shaped like a box with a screen that receives electrical signals and changes them into moving images and sound, or the method or business of sending images and sound by electrical signals.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">TV</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#TemperatureSetpoint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#TemperatureSetpoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment xml:lang="en">The target value at which a controller attempts to maintain the temperature.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Temperature Setpoint</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#TumbleDryer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#TumbleDryer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Appliance"/>
+        <rdfs:comment xml:lang="en">A machine that dries washed clothes by spinning them in hot air inside a rotating drum.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Tumble Dryer</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#Voltage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#Voltage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment xml:lang="en">The force of an electric current, measured in volts.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Voltage</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/respond#WashingMachine -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/respond#WashingMachine">
+        <owl:equivalentClass rdf:resource="https://w3id.org/saref#WashingMachine"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Appliance"/>
+        <rdfs:comment xml:lang="en">A home appliance for washing clothes and linens automatically.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/respond"/>
+        <rdfs:label xml:lang="en">Washing Machine</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/saref#Appliance -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/saref#Appliance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/seas/FeatureOfInterest"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/saref#Device -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/saref#Device">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/saref#Property -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/saref#Property">
+        <owl:equivalentClass rdf:resource="https://w3id.org/seas/Property"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/saref#WashingMachine -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/saref#WashingMachine"/>
+    
+
+
+    <!-- https://w3id.org/seas/FeatureOfInterest -->
+
+
+    <owl:Class rdf:about="https://w3id.org/seas/FeatureOfInterest"/>
+    
+
+
+    <!-- https://w3id.org/seas/Property -->
+
+
+    <owl:Class rdf:about="https://w3id.org/seas/Property"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/respond/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/respond/">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
+
