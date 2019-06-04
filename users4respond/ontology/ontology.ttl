@@ -1,0 +1,138 @@
+@prefix : <https://w3id.org/users4respond##> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/users4respond#> .
+
+<https://w3id.org/users4respond#> rdf:type owl:Ontology ;
+                                   <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                   <http://purl.org/dc/terms/creator> """Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>
+Francisco Javier Diez <mailto:francisco.diez@tekniker.es>"""^^xsd:string ;
+                                   <http://purl.org/dc/terms/description> "The Users4RESPOND ontology aims to represent the participants of the RESPOND project."@en ;
+                                   <http://purl.org/dc/terms/title> "Users 4 RESPOND"^^xsd:string ;
+                                   <http://purl.org/vocab/vann/preferredNamespacePrefix> "u4res"^^xsd:string ;
+                                   <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/users4respond> ;
+                                   owl:versionInfo 0.1 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/users4respond#assignedAgent
+<https://w3id.org/users4respond#assignedAgent> rdf:type owl:ObjectProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                                               rdfs:comment "Relates something to an Agent (e.g. person, group,...)."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/def/respond> ;
+                                               rdfs:label "assignedAgent"@en ;
+                                               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/users4respond#hasNotificationToken
+<https://w3id.org/users4respond#hasNotificationToken> rdf:type owl:ObjectProperty ;
+                                                      rdfs:range <https://w3id.org/users4respond#NotificationToken> ;
+                                                      rdfs:comment "Relates something to a Notification Token."@en ;
+                                                      rdfs:isDefinedBy <https://w3id.org/def/respond> ;
+                                                      rdfs:label "hasNotificationToken"^^xsd:string ;
+                                                      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/users4respond#accountPassword
+<https://w3id.org/users4respond#accountPassword> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:range xsd:string ;
+                                                 rdfs:comment "The password of an account, which can be encrypted."@en ;
+                                                 rdfs:isDefinedBy <https://w3id.org/def/respond> ;
+                                                 rdfs:label "accountPassword"@en ;
+                                                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/users4respond#hasTokenValue
+<https://w3id.org/users4respond#hasTokenValue> rdf:type owl:DatatypeProperty ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:comment "Determines the Token value."@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/def/respond> ;
+                                               rdfs:label "hasTokenValue"@en ;
+                                               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/vocommons/voaf#Vocabulary
+<http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+
+
+###  https://w3id.org/bot#Space
+<https://w3id.org/bot#Space> rdf:type owl:Class .
+
+
+###  https://w3id.org/users4respond#NotificationToken
+<https://w3id.org/users4respond#NotificationToken> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://w3id.org/users4respond#hasNotificationToken> ;
+                                                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                     owl:onClass <https://w3id.org/users4respond#NotificationToken>
+                                                                   ] ;
+                                                   rdfs:comment "Represents the key for the notification purposes."@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/def/respond> ;
+                                                   rdfs:label "Notification Token"@en ;
+                                                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/users4respond#
+<https://w3id.org/users4respond#> rdf:type owl:NamedIndividual ,
+                                           <http://purl.org/vocommons/voaf#Vocabulary> .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
