@@ -75,6 +75,9 @@ This section provides details for each class and property defined by RESPOND.
          <a href="#HeatingDevice" title="https://w3id.org/respond#HeatingDevice">Heating Device</a>
       </li>
       <li>
+         <a href="#Icon" title="https://w3id.org/respond#Icon">Icon</a>
+      </li>
+      <li>
          <a href="#IT" title="https://w3id.org/respond#IT">IT</a>
       </li>
       <li>
@@ -107,6 +110,9 @@ This section provides details for each class and property defined by RESPOND.
          <a href="#PowerConsumption" title="https://w3id.org/respond#PowerConsumption">Power Consumption</a>
       </li>
       <li>
+         <a href="#PowerSupply" title="https://w3id.org/respond#PowerSupply">Power Supply</a>
+      </li>
+      <li>
          <a href="#Printer" title="https://w3id.org/respond#Printer">Printer</a>
       </li>
       <li>
@@ -116,6 +122,11 @@ This section provides details for each class and property defined by RESPOND.
       </li>
       <li>
          <a href="#RSSI" title="https://w3id.org/respond#RSSI">RSSI</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/bot#Space" title="https://w3id.org/bot#Space">
+            <span>space</span>
+         </a>
       </li>
       <li>
          <a href="#StoveOven" title="https://w3id.org/respond#StoveOven">Stove Oven</a>
@@ -317,7 +328,7 @@ This section provides details for each class and property defined by RESPOND.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/bot#Space">space</span>
+            <a href="#https://w3id.org/bot#Space" title="https://w3id.org/bot#Space">space</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -389,6 +400,19 @@ This section provides details for each class and property defined by RESPOND.
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted" title="https://w3id.org/bot#Element">element</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#connectsToInternetThrough"
+               title="https://w3id.org/respond#connectsToInternetThrough">connectsToInternetThrough</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#Gateway" title="https://w3id.org/respond#Gateway">Gateway</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasIcon" title="https://w3id.org/respond#hasIcon">has Icon</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#Icon" title="https://w3id.org/respond#Icon">Icon</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -505,7 +529,7 @@ This section provides details for each class and property defined by RESPOND.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/bot#Space">space</span>
+            <a href="#https://w3id.org/bot#Space" title="https://w3id.org/bot#Space">space</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -733,6 +757,34 @@ This section provides details for each class and property defined by RESPOND.
             <a href="#Boiler" title="https://w3id.org/respond#Boiler">Boiler</a>
             <sup class="type-c" title="class">c</sup>, <a href="#HeatPump" title="https://w3id.org/respond#HeatPump">Heat Pump</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Icon">
+      <h3>Icon<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/respond#Icon</p>
+      <div class="comment">
+         <span class="markdown">A small picture or symbol that represents a resource.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/respond">https://w3id.org/respond</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasIcon" title="https://w3id.org/respond#hasIcon">has Icon</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1014,6 +1066,34 @@ This section provides details for each class and property defined by RESPOND.
          </dd>
       </dl>
    </div>
+   <div class="entity" id="PowerSupply">
+      <h3>Power Supply<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/respond#PowerSupply</p>
+      <div class="comment">
+         <span class="markdown">Power supplied to a load.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/respond">https://w3id.org/respond</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Printer">
       <h3>Printer<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1067,6 +1147,7 @@ This section provides details for each class and property defined by RESPOND.
             <sup class="type-c" title="class">c</sup>, <a href="#Occupancy" title="https://w3id.org/respond#Occupancy">Occupancy</a>
             <sup class="type-c" title="class">c</sup>, <a href="#OnOffProperty" title="https://w3id.org/respond#OnOffProperty">On Off</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PowerConsumption" title="https://w3id.org/respond#PowerConsumption">Power Consumption</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PowerSupply" title="https://w3id.org/respond#PowerSupply">Power Supply</a>
             <sup class="type-c" title="class">c</sup>, <a href="#RSSI" title="https://w3id.org/respond#RSSI">RSSI</a>
             <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSetpoint" title="https://w3id.org/respond#TemperatureSetpoint">Temperature Setpoint</a>
             <sup class="type-c" title="class">c</sup>, <a href="#VOC" title="https://w3id.org/respond#VOC">VOC</a>
@@ -1081,6 +1162,11 @@ This section provides details for each class and property defined by RESPOND.
             <a href="#hasDBQuery" title="https://w3id.org/respond#hasDBQuery">hasDatabaseQuery</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasInfluxDBQuery" title="https://w3id.org/respond#hasInfluxDBQuery">hasInfluxDBQuery</a>
             <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#forecastsProperty" title="https://w3id.org/respond#forecastsProperty">forecasts Property</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1108,6 +1194,42 @@ This section provides details for each class and property defined by RESPOND.
          <dt>has super-classes</dt>
          <dd>
             <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/bot#Space">
+      <h3>space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/bot#Space</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasHouseholdMembersQuantity"
+               title="https://w3id.org/respond#hasHouseholdMembersQuantity">hasHouseholdMembersQuantity</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+         </dd>
+         <dd>
+            <a href="#hasNetPlannedArea" title="https://w3id.org/respond#hasNetPlannedArea">hasNetPlannedArea</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
+         </dd>
+         <dd>
+            <a href="#hasNetVolume" title="https://w3id.org/respond#hasNetVolume">hasNetVolume</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#CommonArea" title="https://w3id.org/respond#CommonArea">Common Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Dwelling" title="https://w3id.org/respond#Dwelling">Dwelling</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1421,11 +1543,17 @@ This section provides details for each class and property defined by RESPOND.
             title="https://w3id.org/respond#connectsToInternetThrough">connectsToInternetThrough</a>
       </li>
       <li>
-         <a href="#forecastsProperty" title="https://w3id.org/respond#forecastsProperty">forecastsProperty</a>
+         <a href="#forecastsProperty" title="https://w3id.org/respond#forecastsProperty">forecasts Property</a>
+      </li>
+      <li>
+         <a href="#hasDataSendingMethod" title="https://w3id.org/respond#hasDataSendingMethod">has Data Sending Method</a>
+      </li>
+      <li>
+         <a href="#hasIcon" title="https://w3id.org/respond#hasIcon">has Icon</a>
       </li>
       <li>
          <a href="#providesServiceToLocation"
-            title="https://w3id.org/respond#providesServiceToLocation">providesServiceToLocation</a>
+            title="https://w3id.org/respond#providesServiceToLocation">provides Service To Location</a>
       </li>
    </ul>
    <div class="entity" id="connectsToInternetThrough">
@@ -1459,7 +1587,7 @@ This section provides details for each class and property defined by RESPOND.
       </div>
    </div>
    <div class="entity" id="forecastsProperty">
-      <h3>forecastsProperty<sup class="type-op" title="object property">op</sup>
+      <h3>forecasts Property<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -1478,9 +1606,74 @@ This section provides details for each class and property defined by RESPOND.
          <dt>Term status</dt>
          <dd>stable</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/seas/Property">property</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDataSendingMethod">
+      <h3>has Data Sending Method<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/respond#hasDataSendingMethod</p>
+      <div class="comment">
+         <span class="markdown">Relates a Device with its method to send data (e.g. on regular intervals or on value change).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/respond">https://w3id.org/respond</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+   </div>
+   <div class="entity" id="hasIcon">
+      <h3>has Icon<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/respond#hasIcon</p>
+      <div class="comment">
+         <span class="markdown">A resource's corresponding icon shown in the RESPOND Mobile app.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/respond">https://w3id.org/respond</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Icon" title="https://w3id.org/respond#Icon">Icon</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="providesServiceToLocation">
-      <h3>providesServiceToLocation<sup class="type-op" title="object property">op</sup>
+      <h3>provides Service To Location<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -1509,9 +1702,6 @@ This section provides details for each class and property defined by RESPOND.
       <li>
          <a href="#hasHouseholdMembersQuantity"
             title="https://w3id.org/respond#hasHouseholdMembersQuantity">hasHouseholdMembersQuantity</a>
-      </li>
-      <li>
-         <a href="#hasIcon" title="https://w3id.org/respond#hasIcon">hasIcon</a>
       </li>
       <li>
          <a href="#hasInfluxDBQuery" title="https://w3id.org/respond#hasInfluxDBQuery">hasInfluxDBQuery</a>
@@ -1586,27 +1776,6 @@ This section provides details for each class and property defined by RESPOND.
             </dd>
          </dl>
       </div>
-   </div>
-   <div class="entity" id="hasIcon">
-      <h3>hasIcon<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/respond#hasIcon</p>
-      <div class="comment">
-         <span class="markdown">A resource's corresponding icon shown in the RESPOND Mobile app .</span>
-      </div>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="https://w3id.org/respond">https://w3id.org/respond</a>
-         </dd>
-      </dl>
-      <dl>
-         <dt>Term status</dt>
-         <dd>stable</dd>
-      </dl>
    </div>
    <div class="entity" id="hasInfluxDBQuery">
       <h3>hasInfluxDBQuery<sup class="type-dp" title="data property">dp</sup>
@@ -1722,6 +1891,11 @@ This section provides details for each class and property defined by RESPOND.
          <dd>stable</dd>
       </dl>
       <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted" title="http://qudt.org/schema/qudt/Unit">unit</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has facts</dt>
          <dd>
             <span class="dotted" title="http://qudt.org/schema/qudt#symbol">symbol</span>
@@ -1767,6 +1941,11 @@ This section provides details for each class and property defined by RESPOND.
          <dd>stable</dd>
       </dl>
       <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted" title="http://qudt.org/schema/qudt/Unit">unit</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has facts</dt>
          <dd>
             <span class="dotted" title="http://qudt.org/schema/qudt#symbol">symbol</span>
@@ -1797,6 +1976,11 @@ This section provides details for each class and property defined by RESPOND.
          <dd>stable</dd>
       </dl>
       <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted" title="http://qudt.org/schema/qudt/Unit">unit</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has facts</dt>
          <dd>
             <span class="dotted" title="http://qudt.org/schema/qudt#symbol">symbol</span>
