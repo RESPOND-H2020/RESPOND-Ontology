@@ -4,27 +4,28 @@
      xmlns:qudt="http://qudt.org/schema/qudt#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:ns1="http://creativecommons.org/ns#"
+     xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/respond#">
         <owl:imports rdf:resource="https://w3id.org/saref"/>
         <owl:imports rdf:resource="https://w3id.org/bot/0.3.0"/>
         <owl:imports rdf:resource="https://w3id.org/seas/FeatureOfInterestOntology"/>
-        <ns1:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <ns:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-03-15</terms:created>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iker Esnaola-Gonzalez &lt;mailto:iker.esnaola@tekniker.es&gt;
 Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <terms:description xml:lang="en">The RESPOND project aims to deploy an interoperable energy automation, monitoring and control solution to deliver DR programs at a dwelling, building and district level.</terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-14</terms:modified>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RESPOND</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respond</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/respond"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -55,6 +56,13 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
     
 
 
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
     <!-- http://purl.org/dc/terms/creator -->
 
 
@@ -66,6 +74,13 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
     
 
 
@@ -117,7 +132,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">Relates an Object with the Gateway with which it is connected to the Internet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">connectsToInternetThrough</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:ObjectProperty>
     
 
@@ -126,10 +141,37 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/respond#forecastsProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/seas/Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/saref#Property"/>
         <rdfs:comment xml:lang="en">Relates a Property that can be forecasted with a certain thing that forecasts it. Inspired by SAREF ontology&apos;s saref:measuresProperty and saref:controlsProperty.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
-        <rdfs:label xml:lang="en">forecastsProperty</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <rdfs:label xml:lang="en">forecasts Property</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/respond#hasDataSendingMethod -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/respond#hasDataSendingMethod">
+        <rdfs:comment xml:lang="en">Relates a Device with its method to send data (e.g. on regular intervals or on value change).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
+        <rdfs:label xml:lang="en">has Data Sending Method</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/respond#hasIcon -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/respond#hasIcon">
+        <rdfs:range rdf:resource="https://w3id.org/respond#Icon"/>
+        <rdfs:comment xml:lang="en">A resource&apos;s corresponding icon shown in the RESPOND Mobile app.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
+        <rdfs:label xml:lang="en">has Icon</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:ObjectProperty>
     
 
@@ -140,8 +182,8 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
     <owl:ObjectProperty rdf:about="https://w3id.org/respond#providesServiceToLocation">
         <rdfs:comment xml:lang="en">Relates a Service with the location to which it applies.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
-        <rdfs:label xml:lang="en">providesServiceToLocation</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <rdfs:label xml:lang="en">provides Service To Location</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:ObjectProperty>
     
 
@@ -180,7 +222,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The quey with which values of a given Property can be extracted from a database.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">hasDatabaseQuery</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:DatatypeProperty>
     
 
@@ -193,19 +235,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The number of houshehold members living in a household.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">hasHouseholdMembersQuantity</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/respond#hasIcon -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/respond#hasIcon">
-        <rdfs:comment xml:lang="en">A resource&apos;s corresponding icon shown in the RESPOND Mobile app .</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
-        <rdfs:label xml:lang="en">hasIcon</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:DatatypeProperty>
     
 
@@ -219,7 +249,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The quey with which values of a given Property can be extracted from an InfluxDB.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">hasInfluxDBQuery</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:DatatypeProperty>
     
 
@@ -231,7 +261,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">Total planned net area for the space.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/"/>
         <rdfs:label xml:lang="en">hasNetPlannedArea</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:DatatypeProperty>
     
 
@@ -243,7 +273,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">Total net volume of a given space.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">hasNetVolume</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:DatatypeProperty>
     
 
@@ -285,6 +315,13 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
     
 
 
+    <!-- http://qudt.org/schema/qudt/Unit -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit"/>
+    
+
+
     <!-- https://w3id.org/bot#Element -->
 
 
@@ -295,7 +332,26 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
     <!-- https://w3id.org/bot#Space -->
 
 
-    <owl:Class rdf:about="https://w3id.org/bot#Space"/>
+    <owl:Class rdf:about="https://w3id.org/bot#Space">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/respond#hasHouseholdMembersQuantity"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/respond#hasNetPlannedArea"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/respond#hasNetVolume"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -316,7 +372,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">AC frequency is the number of cycles per second in an alternating current (AC) sine wave.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">AC Frequency</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -329,7 +385,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A machine that keeps the air in a building cool.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Air Conditioner</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -342,7 +398,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A warning of danger or potential undesired situation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Alarm</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -355,7 +411,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A device that heats water, especially to provide heating and hot water in a house.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Boiler</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -368,7 +424,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">Amenities such as corridors, hallways, lobby, pool, toilets provided for the comfort and use of all occupants, owners, tenants, or users of a building or building complex.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Common Area</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -381,7 +437,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The movement of electricity in a particular direction.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Current</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -394,7 +450,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">Represents the type of weather for a given location (e.g. sunny, cloudy,...).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Day Type</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -407,7 +463,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A machine for washing dishes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Dishwasher</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -420,7 +476,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The amount of domestic cold water consumed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Domestic Cold Water Consumption</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -433,7 +489,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The amount of domestic hot water consumed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Domestic Hot Water Consumption</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -446,7 +502,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">Place where a person or group of people live.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Dwelling</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -459,7 +515,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The rate, per unit time, at which energy is consumed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Power Consumption</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -472,7 +528,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The amount of energy consumed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Energy Consumption</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -485,7 +541,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Energy Production</rdfs:label>
         <rdfs:label xml:lang="en">The amount of energy generated.</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -498,7 +554,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The amount of gas consumed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Gas Consumption</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -511,7 +567,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A gateway is a piece of networking hardware used in telecommunications for telecommunications networks that allows data to flow from one discrete network to another.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gateway</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -524,7 +580,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The amount of heat consumed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Heat Consumption</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -537,7 +593,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A heat pump is a device that transfers heat energy from a source of heat to what is called a heat sink.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Heat Pump</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -550,7 +606,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A device that produces heat.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Heating Device</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -563,7 +619,19 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">An appliance related to IT (Information Technology) such as computer, printer, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">IT</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/respond#Icon -->
+
+
+    <owl:Class rdf:about="https://w3id.org/respond#Icon">
+        <rdfs:comment xml:lang="en">A small picture or symbol that represents a resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
+        <rdfs:label xml:lang="en">Icon</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -576,7 +644,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A device for giving light, especially one that has a covering or is contained within something.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Lamp</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -589,7 +657,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A computer that is portable and suitable for use while travelling.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Laptop</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -602,7 +670,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The strength of a network link</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Network Link Strength</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -615,7 +683,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">Usage of a space.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Occupancy</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -628,7 +696,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A property that determines if something is activated (on) or not (off).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">On Off</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -641,7 +709,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A power system designed to supply usable solar power by means of photovoltaics.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Photovoltaic System</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -654,7 +722,20 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The amount of power consumed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Power Consumption</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/respond#PowerSupply -->
+
+
+    <owl:Class rdf:about="https://w3id.org/respond#PowerSupply">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:comment xml:lang="en">Power supplied to a load.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
+        <rdfs:label xml:lang="en">Power Supply</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -667,7 +748,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A machine that is connected to a computer and prints onto paper using ink.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Printer</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -680,7 +761,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">Received Signal Strength Indicator</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">RSSI</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -693,7 +774,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A piece of equipment that burns fuel or uses electricity in order to heat a place.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Stove Oven</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -706,7 +787,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A device shaped like a box with a screen that receives electrical signals and changes them into moving images and sound, or the method or business of sending images and sound by electrical signals.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">TV</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -719,7 +800,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The target value at which a controller attempts to maintain the temperature.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Temperature Setpoint</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -732,7 +813,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A power system designed to supply thermal energy by means of solar energy.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Thermo Solar System</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -745,7 +826,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A machine that dries washed clothes by spinning them in hot air inside a rotating drum.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Tumble Dryer</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -758,7 +839,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A property that determines the Volatile Organic Compounds (VOC).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">VOC</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -771,7 +852,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The force of an electric current, measured in volts.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Voltage</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -785,7 +866,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">A home appliance for washing clothes and linens automatically.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Washing Machine</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -798,7 +879,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">The amount of water consumed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Water Consumption</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -810,7 +891,7 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
         <rdfs:comment xml:lang="en">Represents a service that provides weather forecast to specific locations.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">Weather Forecasting Service</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:Class>
     
 
@@ -829,6 +910,20 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
 
     <owl:Class rdf:about="https://w3id.org/saref#Device">
         <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/respond#connectsToInternetThrough"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/respond#Gateway"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/respond#hasIcon"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/respond#Icon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -886,11 +981,12 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/respond#binary">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0-1</qudt:symbol>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:isDefinedBy xml:lang="en">This measurement is binary (true or false).</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">binary</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:NamedIndividual>
     
 
@@ -899,11 +995,12 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/respond#ppb">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ppb</qudt:symbol>
         <rdfs:comment xml:lang="en">This measurement is the mass of a chemical or contaminate per 1000 million units volume of water.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">ppb</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:NamedIndividual>
     
 
@@ -912,11 +1009,12 @@ Francisco Javier Diez &lt;mailto:francisco.diez@tekniker.es&gt;</terms:creator>
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/respond#ppm">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
         <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ppm</qudt:symbol>
         <rdfs:comment xml:lang="en">This measurement is the mass of a chemical or contaminate per unit volume of water.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/respond"/>
         <rdfs:label xml:lang="en">ppm</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
     </owl:NamedIndividual>
     
 

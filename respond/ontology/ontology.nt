@@ -3,12 +3,14 @@
 <https://w3id.org/respond#> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot/0.3.0> .
 <https://w3id.org/respond#> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/seas/FeatureOfInterestOntology> .
 <https://w3id.org/respond#> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/respond#> <http://purl.org/dc/terms/created> "2019-03-15" .
 <https://w3id.org/respond#> <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>\nFrancisco Javier Diez <mailto:francisco.diez@tekniker.es>" .
 <https://w3id.org/respond#> <http://purl.org/dc/terms/description> "The RESPOND project aims to deploy an interoperable energy automation, monitoring and control solution to deliver DR programs at a dwelling, building and district level."@en .
+<https://w3id.org/respond#> <http://purl.org/dc/terms/modified> "2020-04-14" .
 <https://w3id.org/respond#> <http://purl.org/dc/terms/title> "RESPOND" .
 <https://w3id.org/respond#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "respond" .
 <https://w3id.org/respond#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/respond> .
-<https://w3id.org/respond#> <http://www.w3.org/2002/07/owl#versionInfo> "0.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/respond#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # #################################################################
@@ -24,11 +26,17 @@
 # http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -61,16 +69,33 @@
 # 
 # https://w3id.org/respond#forecastsProperty
 <https://w3id.org/respond#forecastsProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/respond#forecastsProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/seas/Property> .
+<https://w3id.org/respond#forecastsProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/saref#Property> .
 <https://w3id.org/respond#forecastsProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Property that can be forecasted with a certain thing that forecasts it. Inspired by SAREF ontology's saref:measuresProperty and saref:controlsProperty."@en .
 <https://w3id.org/respond#forecastsProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/respond> .
-<https://w3id.org/respond#forecastsProperty> <http://www.w3.org/2000/01/rdf-schema#label> "forecastsProperty"@en .
+<https://w3id.org/respond#forecastsProperty> <http://www.w3.org/2000/01/rdf-schema#label> "forecasts Property"@en .
 <https://w3id.org/respond#forecastsProperty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/respond#hasDataSendingMethod
+<https://w3id.org/respond#hasDataSendingMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/respond#hasDataSendingMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Device with its method to send data (e.g. on regular intervals or on value change)."@en .
+<https://w3id.org/respond#hasDataSendingMethod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/respond> .
+<https://w3id.org/respond#hasDataSendingMethod> <http://www.w3.org/2000/01/rdf-schema#label> "has Data Sending Method"@en .
+<https://w3id.org/respond#hasDataSendingMethod> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/respond#hasIcon
+<https://w3id.org/respond#hasIcon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/respond#hasIcon> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/respond#Icon> .
+<https://w3id.org/respond#hasIcon> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource's corresponding icon shown in the RESPOND Mobile app."@en .
+<https://w3id.org/respond#hasIcon> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/respond> .
+<https://w3id.org/respond#hasIcon> <http://www.w3.org/2000/01/rdf-schema#label> "has Icon"@en .
+<https://w3id.org/respond#hasIcon> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/respond#providesServiceToLocation
 <https://w3id.org/respond#providesServiceToLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/respond#providesServiceToLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Service with the location to which it applies."@en .
 <https://w3id.org/respond#providesServiceToLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/respond> .
-<https://w3id.org/respond#providesServiceToLocation> <http://www.w3.org/2000/01/rdf-schema#label> "providesServiceToLocation"@en .
+<https://w3id.org/respond#providesServiceToLocation> <http://www.w3.org/2000/01/rdf-schema#label> "provides Service To Location"@en .
 <https://w3id.org/respond#providesServiceToLocation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/seas/isPropertyOf
@@ -103,13 +128,6 @@
 <https://w3id.org/respond#hasHouseholdMembersQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/respond> .
 <https://w3id.org/respond#hasHouseholdMembersQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "hasHouseholdMembersQuantity"@en .
 <https://w3id.org/respond#hasHouseholdMembersQuantity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
-# 
-# https://w3id.org/respond#hasIcon
-<https://w3id.org/respond#hasIcon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/respond#hasIcon> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource's corresponding icon shown in the RESPOND Mobile app ."@en .
-<https://w3id.org/respond#hasIcon> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/respond> .
-<https://w3id.org/respond#hasIcon> <http://www.w3.org/2000/01/rdf-schema#label> "hasIcon"@en .
-<https://w3id.org/respond#hasIcon> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/respond#hasInfluxDBQuery
 <https://w3id.org/respond#hasInfluxDBQuery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -154,11 +172,26 @@
 # http://purl.org/vocommons/voaf#Vocabulary
 <http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # https://w3id.org/bot#Element
 <https://w3id.org/bot#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/bot#Space
 <https://w3id.org/bot#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/respond#hasHouseholdMembersQuantity> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/respond#hasNetPlannedArea> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/respond#hasNetVolume> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
 # 
 # https://w3id.org/bot#Zone
 <https://w3id.org/bot#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -324,6 +357,13 @@
 <https://w3id.org/respond#IT> <http://www.w3.org/2000/01/rdf-schema#label> "IT"@en .
 <https://w3id.org/respond#IT> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
+# https://w3id.org/respond#Icon
+<https://w3id.org/respond#Icon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/respond#Icon> <http://www.w3.org/2000/01/rdf-schema#comment> "A small picture or symbol that represents a resource."@en .
+<https://w3id.org/respond#Icon> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/respond> .
+<https://w3id.org/respond#Icon> <http://www.w3.org/2000/01/rdf-schema#label> "Icon"@en .
+<https://w3id.org/respond#Icon> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
 # https://w3id.org/respond#Lamp
 <https://w3id.org/respond#Lamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/respond#Lamp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Appliance> .
@@ -379,6 +419,14 @@
 <https://w3id.org/respond#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/respond> .
 <https://w3id.org/respond#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "Power Consumption"@en .
 <https://w3id.org/respond#PowerConsumption> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/respond#PowerSupply
+<https://w3id.org/respond#PowerSupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/respond#PowerSupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<https://w3id.org/respond#PowerSupply> <http://www.w3.org/2000/01/rdf-schema#comment> "Power supplied to a load."@en .
+<https://w3id.org/respond#PowerSupply> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/respond> .
+<https://w3id.org/respond#PowerSupply> <http://www.w3.org/2000/01/rdf-schema#label> "Power Supply"@en .
+<https://w3id.org/respond#PowerSupply> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/respond#Printer
 <https://w3id.org/respond#Printer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -483,6 +531,16 @@
 # https://w3id.org/saref#Device
 <https://w3id.org/saref#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .
+<https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/respond#connectsToInternetThrough> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/respond#Gateway> .
+<https://w3id.org/saref#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/respond#hasIcon> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/respond#Icon> .
 # 
 # https://w3id.org/saref#Generator
 <https://w3id.org/saref#Generator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -511,6 +569,7 @@
 # 
 # https://w3id.org/respond#binary
 <https://w3id.org/respond#binary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/respond#binary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit> .
 <https://w3id.org/respond#binary> <http://qudt.org/schema/qudt#symbol> "0-1" .
 <https://w3id.org/respond#binary> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/respond> .
 <https://w3id.org/respond#binary> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "This measurement is binary (true or false)."@en .
@@ -519,6 +578,7 @@
 # 
 # https://w3id.org/respond#ppb
 <https://w3id.org/respond#ppb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/respond#ppb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit> .
 <https://w3id.org/respond#ppb> <http://qudt.org/schema/qudt#symbol> "ppb" .
 <https://w3id.org/respond#ppb> <http://www.w3.org/2000/01/rdf-schema#comment> "This measurement is the mass of a chemical or contaminate per 1000 million units volume of water."@en .
 <https://w3id.org/respond#ppb> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/respond> .
@@ -527,6 +587,7 @@
 # 
 # https://w3id.org/respond#ppm
 <https://w3id.org/respond#ppm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/respond#ppm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit> .
 <https://w3id.org/respond#ppm> <http://qudt.org/schema/qudt#symbol> "ppm" .
 <https://w3id.org/respond#ppm> <http://www.w3.org/2000/01/rdf-schema#comment> "This measurement is the mass of a chemical or contaminate per unit volume of water."@en .
 <https://w3id.org/respond#ppm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/respond> .

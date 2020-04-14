@@ -11,13 +11,15 @@
                                          <https://w3id.org/bot/0.3.0> ,
                                          <https://w3id.org/seas/FeatureOfInterestOntology> ;
                              <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> ;
+                             <http://purl.org/dc/terms/created> "2019-03-15"^^xsd:string ;
                              <http://purl.org/dc/terms/creator> """Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>
 Francisco Javier Diez <mailto:francisco.diez@tekniker.es>"""^^xsd:string ;
                              <http://purl.org/dc/terms/description> "The RESPOND project aims to deploy an interoperable energy automation, monitoring and control solution to deliver DR programs at a dwelling, building and district level."@en ;
+                             <http://purl.org/dc/terms/modified> "2020-04-14"^^xsd:string ;
                              <http://purl.org/dc/terms/title> "RESPOND"^^xsd:string ;
                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "respond"^^xsd:string ;
                              <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/respond> ;
-                             owl:versionInfo 0.5 .
+                             owl:versionInfo 1.0 .
 
 #################################################################
 #    Annotation properties
@@ -31,12 +33,20 @@ Francisco Javier Diez <mailto:francisco.diez@tekniker.es>"""^^xsd:string ;
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
@@ -70,17 +80,36 @@ Francisco Javier Diez <mailto:francisco.diez@tekniker.es>"""^^xsd:string ;
 
 ###  https://w3id.org/respond#forecastsProperty
 <https://w3id.org/respond#forecastsProperty> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <https://w3id.org/seas/Property> ;
+                                             rdfs:range <https://w3id.org/saref#Property> ;
                                              rdfs:comment "Relates a Property that can be forecasted with a certain thing that forecasts it. Inspired by SAREF ontology's saref:measuresProperty and saref:controlsProperty."@en ;
                                              rdfs:isDefinedBy <https://w3id.org/respond> ;
-                                             rdfs:label "forecastsProperty"@en ;
+                                             rdfs:label "forecasts Property"@en ;
                                              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/respond#hasDataSendingMethod
+<https://w3id.org/respond#hasDataSendingMethod> rdf:type owl:ObjectProperty ;
+                                                rdfs:comment "Relates a Device with its method to send data (e.g. on regular intervals or on value change)."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/respond> ;
+                                                rdfs:label "has Data Sending Method"@en ;
+                                                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/respond#hasIcon
+<https://w3id.org/respond#hasIcon> rdf:type owl:ObjectProperty ;
+                                   rdfs:range <https://w3id.org/respond#Icon> ;
+                                   rdfs:comment "A resource's corresponding icon shown in the RESPOND Mobile app."@en ;
+                                   rdfs:isDefinedBy <https://w3id.org/respond> ;
+                                   rdfs:label "has Icon"@en ;
+                                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/respond#providesServiceToLocation
 <https://w3id.org/respond#providesServiceToLocation> rdf:type owl:ObjectProperty ;
                                                      rdfs:comment "Relates a Service with the location to which it applies."@en ;
                                                      rdfs:isDefinedBy <https://w3id.org/respond> ;
-                                                     rdfs:label "providesServiceToLocation"@en ;
+                                                     rdfs:label "provides Service To Location"@en ;
                                                      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
@@ -112,14 +141,6 @@ Francisco Javier Diez <mailto:francisco.diez@tekniker.es>"""^^xsd:string ;
                                                        rdfs:isDefinedBy <https://w3id.org/respond> ;
                                                        rdfs:label "hasHouseholdMembersQuantity"@en ;
                                                        <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
-
-
-###  https://w3id.org/respond#hasIcon
-<https://w3id.org/respond#hasIcon> rdf:type owl:DatatypeProperty ;
-                                   rdfs:comment "A resource's corresponding icon shown in the RESPOND Mobile app ."@en ;
-                                   rdfs:isDefinedBy <https://w3id.org/respond> ;
-                                   rdfs:label "hasIcon"@en ;
-                                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/respond#hasInfluxDBQuery
@@ -166,12 +187,28 @@ Francisco Javier Diez <mailto:francisco.diez@tekniker.es>"""^^xsd:string ;
 <http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class .
 
 
+###  http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class .
+
+
 ###  https://w3id.org/bot#Element
 <https://w3id.org/bot#Element> rdf:type owl:Class .
 
 
 ###  https://w3id.org/bot#Space
-<https://w3id.org/bot#Space> rdf:type owl:Class .
+<https://w3id.org/bot#Space> rdf:type owl:Class ;
+                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                               owl:onProperty <https://w3id.org/respond#hasHouseholdMembersQuantity> ;
+                                               owl:someValuesFrom xsd:integer
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <https://w3id.org/respond#hasNetPlannedArea> ;
+                                               owl:someValuesFrom xsd:double
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <https://w3id.org/respond#hasNetVolume> ;
+                                               owl:someValuesFrom xsd:double
+                                             ] .
 
 
 ###  https://w3id.org/bot#Zone
@@ -359,6 +396,14 @@ Francisco Javier Diez <mailto:francisco.diez@tekniker.es>"""^^xsd:string ;
                               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
+###  https://w3id.org/respond#Icon
+<https://w3id.org/respond#Icon> rdf:type owl:Class ;
+                                rdfs:comment "A small picture or symbol that represents a resource."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/respond> ;
+                                rdfs:label "Icon"@en ;
+                                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
 ###  https://w3id.org/respond#Lamp
 <https://w3id.org/respond#Lamp> rdf:type owl:Class ;
                                 rdfs:subClassOf <https://w3id.org/saref#Appliance> ;
@@ -420,6 +465,15 @@ Francisco Javier Diez <mailto:francisco.diez@tekniker.es>"""^^xsd:string ;
                                             rdfs:isDefinedBy <https://w3id.org/respond> ;
                                             rdfs:label "Power Consumption"@en ;
                                             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/respond#PowerSupply
+<https://w3id.org/respond#PowerSupply> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/saref#Property> ;
+                                       rdfs:comment "Power supplied to a load."@en ;
+                                       rdfs:isDefinedBy <https://w3id.org/respond> ;
+                                       rdfs:label "Power Supply"@en ;
+                                       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/respond#Printer
@@ -537,7 +591,17 @@ Francisco Javier Diez <mailto:francisco.diez@tekniker.es>"""^^xsd:string ;
 
 ###  https://w3id.org/saref#Device
 <https://w3id.org/saref#Device> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/bot#Element> .
+                                rdfs:subClassOf <https://w3id.org/bot#Element> ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <https://w3id.org/respond#connectsToInternetThrough> ;
+                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass <https://w3id.org/respond#Gateway>
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <https://w3id.org/respond#hasIcon> ;
+                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass <https://w3id.org/respond#Icon>
+                                                ] .
 
 
 ###  https://w3id.org/saref#Generator
@@ -566,7 +630,8 @@ Francisco Javier Diez <mailto:francisco.diez@tekniker.es>"""^^xsd:string ;
 #################################################################
 
 ###  https://w3id.org/respond#binary
-<https://w3id.org/respond#binary> rdf:type owl:NamedIndividual ;
+<https://w3id.org/respond#binary> rdf:type owl:NamedIndividual ,
+                                           <http://qudt.org/schema/qudt/Unit> ;
                                   <http://qudt.org/schema/qudt#symbol> "0-1"^^xsd:string ;
                                   rdfs:isDefinedBy <https://w3id.org/respond> ,
                                                    "This measurement is binary (true or false)."@en ;
@@ -575,7 +640,8 @@ Francisco Javier Diez <mailto:francisco.diez@tekniker.es>"""^^xsd:string ;
 
 
 ###  https://w3id.org/respond#ppb
-<https://w3id.org/respond#ppb> rdf:type owl:NamedIndividual ;
+<https://w3id.org/respond#ppb> rdf:type owl:NamedIndividual ,
+                                        <http://qudt.org/schema/qudt/Unit> ;
                                <http://qudt.org/schema/qudt#symbol> "ppb"^^xsd:string ;
                                rdfs:comment "This measurement is the mass of a chemical or contaminate per 1000 million units volume of water."@en ;
                                rdfs:isDefinedBy <https://w3id.org/respond> ;
@@ -584,7 +650,8 @@ Francisco Javier Diez <mailto:francisco.diez@tekniker.es>"""^^xsd:string ;
 
 
 ###  https://w3id.org/respond#ppm
-<https://w3id.org/respond#ppm> rdf:type owl:NamedIndividual ;
+<https://w3id.org/respond#ppm> rdf:type owl:NamedIndividual ,
+                                        <http://qudt.org/schema/qudt/Unit> ;
                                <http://qudt.org/schema/qudt#symbol> "ppm"^^xsd:string ;
                                rdfs:comment "This measurement is the mass of a chemical or contaminate per unit volume of water."@en ;
                                rdfs:isDefinedBy <https://w3id.org/respond> ;
